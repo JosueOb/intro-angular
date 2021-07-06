@@ -1,7 +1,8 @@
 <h1>Hellow {{ title }}</h1>
+<h3>The base is: <strong>{{ base }}</strong></h3>
 
-<button (click)="operation(+1)">+ 1</button>
+<button (click)="operation(base)">+ {{ base }}</button>
 
 <span>{{ number }}</span>
 
-<button (click)="operation(-1)">- 1</button>
+<button (click)="operation(-base)">- {{ base }}</button>
