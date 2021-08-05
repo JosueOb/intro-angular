@@ -1,8 +1,8 @@
 <p>Heros list</p>
 
-<div>
-  <h2>Hero deleted</h2>
-  <span>{{ hero_deleted }}</span>
+<!--<div *ngIf=" hero_deleted !== '' ">-->
+<div *ngIf=" hero_deleted "> <!-- return false in: '', null, undefined -->
+  <h2>Hero deleted <small>{{ hero_deleted }}</small></h2>
 </div>
 
 <button (click)="deleteHero()">Delete Hero</button>
