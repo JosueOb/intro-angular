@@ -14,7 +14,15 @@ export class HeroComponent{
         return `${ this.name } - ${this.age}`;
     }
 
-    get nameCapitalized(){
+    get nameCapitalized(): string{
         return this.name.toLocaleUpperCase();
+    }
+
+    changeName():void{
+        this.name = 'Spiderman';
+    }
+
+    changeAge(): void{
+        this.age = 35;
     }
 }
