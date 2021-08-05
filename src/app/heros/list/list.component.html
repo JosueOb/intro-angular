@@ -1,9 +1,16 @@
 <p>Heros list</p>
 
 <!--<div *ngIf=" hero_deleted !== '' ">-->
-<div *ngIf=" hero_deleted "> <!-- return false in: '', null, undefined -->
-  <h2>Hero deleted <small>{{ hero_deleted }}</small></h2>
+<div *ngIf="hero_deleted; else noHeroDeleted">
+  <!-- return false in: '', null, undefined -->
+  <h2>
+    Hero deleted <small>{{ hero_deleted }}</small>
+  </h2>
 </div>
+
+<ng-template #noHeroDeleted>
+  <h2>No hero deleted</h2>
+</ng-template>
 
 <button (click)="deleteHero()">Delete Hero</button>
 
