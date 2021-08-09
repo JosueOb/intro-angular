@@ -16,10 +16,11 @@
     <h3>Form</h3>
     <hr />
 
-    <form action="">
+    <!--Se envía el evento del formulario-->
+    <form (ngSubmit)="add()">
       <input type="text" placeholder="Name" />
       <input type="nummber" placeholder="Power" />
-      <button>Add</button>
+      <button type="submit">Add</button>
     </form>
   </div>
 </div>
