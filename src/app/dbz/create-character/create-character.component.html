@@ -1,0 +1,24 @@
+<h3>
+  Form <small>{{ newCharacter.name }}</small>
+</h3>
+<hr />
+
+<!--Se envía el evento del formulario-->
+<form (ngSubmit)="add()">
+  <input
+    type="text"
+    placeholder="Name"
+    name="name"
+    [(ngModel)]="newCharacter.name"
+  />
+  <!--[value]="newCharacter.name"
+      (input)="chandeName($event)"-->
+  <input
+    type="nummber"
+    placeholder="Power"
+    name="power"
+    [(ngModel)]="newCharacter.power"
+  />
+  <!--[value]="newCharacter.power"-->
+  <button type="submit">Add</button>
+</form>
