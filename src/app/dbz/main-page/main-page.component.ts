@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-interface Character {
-  name: string;
-  power: number;
-}
+import { Character } from '../interfaces/dbz.interface';
 
 @Component({
   selector: 'app-main-page',
@@ -27,7 +23,7 @@ export class MainPageComponent {
   };
 
   add(): void {
-    //Termina la ejecución de la función en caso que el el nombre del personaje sea un string vacío 
+    //Termina la ejecución de la función en caso que el el nombre del personaje sea un string vacío
     if (this.newCharacter.name.trim().length === 0) {
       return;
     }
